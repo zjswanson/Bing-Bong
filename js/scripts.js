@@ -1,18 +1,15 @@
-// test values.  Eventually, the interface should gather these values and assign to these variables.
-
-var inputLength = 30;
-var inputNumber1 = 3;
-var inputNumber2 = 6;
-var inputString1 = "ping";
-var inputString2 = "pong";
+// Back end logic
+var inputLength;
+var inputNumber1;
+var inputNumber2;
+var inputString1;
+var inputString2;
 var largeNumber;
 var largeString = "";
 var smallNumber;
 var smallString = "";
 var product;
 var productString = "";
-
-// Back end logic
 
 var assignValues = function() {
   if (inputNumber1>inputNumber2) {
@@ -30,8 +27,10 @@ var assignValues = function() {
   productString=inputString1 + "-" +inputString2;
 };
 
+
 var writeList = function(length){
   var list =[];
+
   for (var i=1;i<=length;i+=1) {
     if (i%product===0){
       list.push(productString);
@@ -43,16 +42,26 @@ var writeList = function(length){
       list.push(i);
     }
   }
-  // console.log(list);
+  console.log(list);
   return list;
 };
 
-// assignValues();
-// writeList(inputLength);
+
+
+
 // Interface logic
 
 $(function(){
-  // hey Zach!  don't forget to move your global variables in here!
+  $("#inputform").submit(function(event){
+    event.preventDefault();
+    inputLength = parseInt($("input#length").val());
+    inputNumber1 = parseInt($("input#number1").val());
+    inputNumber2 = parseInt($("input#number2").val());
+    inputString1 = $("input#string1").val();
+    inputString2 = $("input#string2").val();
+    assignValues();
+    writeList(inputLength);
+  });
 
 
 });
