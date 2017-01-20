@@ -33,7 +33,11 @@ var assignValues = function() {
 var writeList = function(length){
   var list =[];
   for (i=1;i<=length;i+=1) {
-    list.push(i);
+    if (i%largeNumber===0){
+      list.push(largeString);
+    } else {
+      list.push(i);
+    }
   }
   console.log(list);
   return list;
