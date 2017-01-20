@@ -42,18 +42,15 @@ Behavior: As above, but conduct the replacement for multiples of both inputs and
 *input: N=12, 3,"bing", 4,"bong"
 *output: [1,2,"bing","bong",5,"bing",7,"bong","bing",10,11,"bing-bong"]
 
-Behavior: Add fun "easter egg" behavior if user inputted strings are "bing" and "bong"
-*input: "bing","bong"
-*output: You'll have to run the application to see :)
 
 ## Setup/Installation Requirements
 
-* _To run, clone this repository and index.html in the browser of your choice.  Alternately, the application is currently hosted by github at the address below:_
+* _To run, clone this repository and index.html in the browser of your choice.  Alternately, the application is currently hosted by github and can be viewed [here][https://zjswanson.github.io/Bing-Bong]
 
 
 ## Known Bugs
 
-_ _
+_No bugs per se, but it could be prettier and the results aren't as fun if the numeric inputs are the same_
 
 ## Support and contact details
 

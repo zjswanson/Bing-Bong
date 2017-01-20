@@ -3,3 +3,11 @@ p.divisible,
 p.same {
   display: none;
 }
+
+.jumbotron {
+  color: #31708f;
+  background-color: #d9edf7;
+}
+li {
+  font-size: large;
+}
