@@ -10,6 +10,7 @@
   <body>
     <div class="jumbotron">
       <h1>Ping Pong!</h1>
+      <h3>Behold the power of scripted loops!</h3>
     </div>
     <div class="container">
       <div class="row">
@@ -18,26 +19,42 @@
           <form id="inputform">
             <div class="form-group">
               <label for="length">How many numbers should we list?</label>
-              <input type="text" id="length" placeholder="30" value="30">
+              <input type="text" class="form-control" id="length" placeholder="30" value="30">
             </div>
             <div class="form-group">
-              <label for="number1">Enter a number to replace</label>
-              <input type="text" id="number1" placeholder="3" value ="3">
+              <label for="number1">Enter a number to replace all multiples</label>
+              <input type="text" class="form-control" id="number1" placeholder="3" value ="3">
             </div>
             <div class="form-group">
               <label for="string1">Enter text to replace it with</label>
-              <input type="text" id="string1" placeholder="ping" value="ping">
+              <input type="text" class="form-control" id="string1" placeholder="ping" value="ping">
             </div>
             <div class="form-group">
-              <label for="number2">Enter another number to replace</label>
-              <input type="text" id="number2" placeholder="5" value="5">
+              <label for="number2">Enter another number to replace it's multiples</label>
+              <input type="text" class="form-control" id="number2" placeholder="5" value="5">
             </div>
             <div class="form-group">
               <label for="string2">Enter text to replace it with</label>
-              <input type="text" id="string2" placeholder="pong" value="pong">
+              <input type="text" class="form-control" id="string2" placeholder="pong" value="pong">
             </div>
-            <button type="submit" id="submit">Write the list!</button>
+            <button type="submit" class="form-control" id="submit">Write the list!</button>
           </form>
+          <h4>How does it work?</h4>
+          <p>
+            When you enter info into the fields above, this application goes to work writing a list based on a couple of rules.  The list will count from 1 up until the number you specify.  It replaces the multiples of the numbers you handed it with the text you specified.  Then, it multiplies your numbers together, smooshes your text inputs together, and replaces all the multiples of the product of your two numbers with the smooshed up text.
+          </p>
+          <p class="method">
+            The best part is that all this replacement is accomplished with a simple loop of script.  We've just told the computer how to loop through all the items in the list and put in everything you want us to.  Three cheers for the power of loops!
+          </p>
+          <p class="divisible">
+            Whoah, getting tricky!  Did you notice that one of your replacement numbers is divisible by the other one?  This presents a conundrum when we apply the replacement rules.  Every time we check to see if something is divise by the big number, it will be divisible by the small number too.  What to do?
+          </p>
+          <p class="divisible">
+            You'll notice, our loop only makes the replacement for the small number when it the list entry is divisible by <u>only</u> the smal number.  If a number is also divisible by the big number, we use it's text.  Neato!
+          </p>
+          <p class="same">
+            But you're trying to break it now, aren't you?  Both your numbers are the same.  Based on the rules, it's a little unclear which text should go where.  Our loops default behavior means that you just won't see your first text entry by itself.  You rule breaker, you.
+          </p>
         </div>
         <div class="col-sm-8 outputpane">
           <h3>Here's your list:</h3>

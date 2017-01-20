@@ -49,6 +49,9 @@ var writeList = function(length){
 $(function(){
   $("#inputform").submit(function(event){
     event.preventDefault();
+    $("p.method").hide();
+    $("p.divisible").hide();
+    $("p.same").hide();
     $("#displaylist").children().remove();
     inputLength = parseInt($("input#length").val());
     inputNumber1 = parseInt($("input#number1").val());
@@ -56,6 +59,13 @@ $(function(){
     inputString1 = $("input#string1").val();
     inputString2 = $("input#string2").val();
     assignValues();
+    if (smallNumber===largeNumber) {
+      $("p.same").show();
+    } else if (largeNumber%smallNumber===0){
+      $("p.divisible").show();
+    } else {
+      $("p.method").show();
+    }
     var list = writeList(inputLength);
     list.forEach(function(element){
       $("#displaylist").append("<li>"+element+"</li>");
