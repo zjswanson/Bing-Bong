@@ -33,8 +33,12 @@ var assignValues = function() {
 var writeList = function(length){
   var list =[];
   for (i=1;i<=length;i+=1) {
-    if (i%largeNumber===0){
+    if (i%product===0){
+      list.push(productString);
+    } else if (i%largeNumber===0){
       list.push(largeString);
+    }else if (i%smallNumber===0) {
+      list.push(smallString);
     } else {
       list.push(i);
     }
