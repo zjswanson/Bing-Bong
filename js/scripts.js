@@ -30,7 +30,6 @@ var assignValues = function() {
 
 var writeList = function(length){
   var list =[];
-
   for (var i=1;i<=length;i+=1) {
     if (i%product===0){
       list.push(productString);
@@ -42,26 +41,24 @@ var writeList = function(length){
       list.push(i);
     }
   }
-  console.log(list);
   return list;
 };
-
-
-
 
 // Interface logic
 
 $(function(){
   $("#inputform").submit(function(event){
     event.preventDefault();
+    $("#displaylist").children().remove();
     inputLength = parseInt($("input#length").val());
     inputNumber1 = parseInt($("input#number1").val());
     inputNumber2 = parseInt($("input#number2").val());
     inputString1 = $("input#string1").val();
     inputString2 = $("input#string2").val();
     assignValues();
-    writeList(inputLength);
+    var list = writeList(inputLength);
+    list.forEach(function(element){
+      $("#displaylist").append("<li>"+element+"</li>");
+    });
   });
-
-
 });
