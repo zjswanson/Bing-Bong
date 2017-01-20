@@ -1,6 +1,6 @@
 // test values.  Eventually, the interface should gather these values and assign to these variables.
 
-var length = 30;
+var inputLength = 30;
 var inputNumber1 = 3;
 var inputNumber2 = 5;
 var inputString1 = "ping";
@@ -29,12 +29,18 @@ var assignValues = function() {
   product = inputNumber1*inputNumber2;
   productString=inputString1 + "-" +inputString2;
 };
-assignValues();
-alert(smallString);
-alert(smallNumber);
-alert(product);
-alert(productString);
 
+var writeList = function(length){
+  var list =[];
+  for (i=1;i<=length;i+=1) {
+    list.push(i);
+  }
+  console.log(list);
+  return list;
+};
+
+assignValues();
+writeList(inputLength);
 // Interface logic
 
 $(function(){
