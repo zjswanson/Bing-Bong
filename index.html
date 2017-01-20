@@ -10,8 +10,44 @@
   <body>
     <div class="jumbotron">
       <h1>Ping Pong!</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 inputpane">
+          <h3>Input Values here:</h3>
+          <form id="input">
+            <div class="form-group">
+              <label for="length">How many numbers should we list?</label>
+              <input type="text" id="length" placeholder="30">
+            </div>
+            <div class="form-group">
+              <label for="number1">Enter a number to replace</label>
+              <input type="text" id="number1" placeholder="3">
+            </div>
+            <div class="form-group">
+              <label for="string1">Enter text to replace it with</label>
+              <input type="text" id="string1" placeholder="ping">
+            </div>
+            <div class="form-group">
+              <label for="number2">Enter another number to replace</label>
+              <input type="text" id="number2" placeholder="5">
+            </div>
+            <div class="form-group">
+              <label for="string2">Enter text to replace it with</label>
+              <input type="text" id="string2" placeholder="pong">
+            </div>
+            <button type="submit" id="submit">Write the list!</button>
+          </form>
+        </div>
+        <div class="col-sm-8 outputpane">
+          <h3>Here's your list:</h3>
+          <ul id="displaylist">
+            
+          </ul>
+        </div>
+
+      </div>
 
     </div>
-
   </body>
 </html>

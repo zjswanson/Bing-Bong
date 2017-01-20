@@ -2,7 +2,7 @@
 
 var inputLength = 30;
 var inputNumber1 = 3;
-var inputNumber2 = 5;
+var inputNumber2 = 6;
 var inputString1 = "ping";
 var inputString2 = "pong";
 var largeNumber;
@@ -32,7 +32,7 @@ var assignValues = function() {
 
 var writeList = function(length){
   var list =[];
-  for (i=1;i<=length;i+=1) {
+  for (var i=1;i<=length;i+=1) {
     if (i%product===0){
       list.push(productString);
     } else if (i%largeNumber===0){
@@ -43,12 +43,12 @@ var writeList = function(length){
       list.push(i);
     }
   }
-  console.log(list);
+  // console.log(list);
   return list;
 };
 
-assignValues();
-writeList(inputLength);
+// assignValues();
+// writeList(inputLength);
 // Interface logic
 
 $(function(){
