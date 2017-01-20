@@ -10,11 +10,11 @@ _This application is meant as a demonstration of techniques for looping with Jav
 
 ## Application Behaviors
 
-_Overview: This application is designed to generate an ordered list of numbers with certain entries replaced with text based on user input.  The user inputs the length of the list (N), two numeric values, and a text string associated with each numeric value.  The application then generates a list of the numbers 1 through N, replacing all multiples of each numeric input with its associated text string, and replacing all multiples of the product of the two numeric inputs with the concatenation of the two strings.
+_Overview: This application is designed to generate an ordered list of numbers with certain entries replaced with text based on user input.  The user inputs the length of the list (N), two numeric values, and a text string associated with each numeric value.  The application then generates a list of the numbers 1 through N, replacing all multiples of each numeric input with its associated text string, and replacing all multiples of the product of the two numeric inputs with the concatenation of the two strings (with a dash between the two words).
 
 **Example:
 **Input: length 60, 3 - bing, 5 - bong.
-Output: list of 1 to 60, multiples of 3 replaced with "bing", multiples of 5 replaced with "bong", multiples of 15 replaced with "bingbong"
+Output: list of 1 to 60, multiples of 3 replaced with "bing", multiples of 5 replaced with "bong", multiples of 15 replaced with "bing-bong"
 
 specific behaviors:
 
@@ -28,7 +28,7 @@ Behavior: Multiply the two numeric inputs
 
 Behavior: Concatenate the two string inputs
 *input: bing,bong
-*output: bingbong
+*output: bing-bong
 
 Behavior: Generate an array of numbers from 1 to N
 *input: 5
@@ -40,11 +40,11 @@ Behavior: When generating the list, replace multiples of a numeric input with it
 
 Behavior: As above, but conduct the replacement for multiples of both inputs and their product.
 *input: N=12, 3,"bing", 4,"bong"
-*output: [1,2,"bing","bong",5,"bing",7,"bong","bing",10,11,"bingbong"]
+*output: [1,2,"bing","bong",5,"bing",7,"bong","bing",10,11,"bing-bong"]
 
 Behavior: Add fun "easter egg" behavior if user inputted strings are "bing" and "bong"
 *input: "bing","bong"
-*output: You'll have to run the application to see :).
+*output: You'll have to run the application to see :)
 
 ## Setup/Installation Requirements
 
